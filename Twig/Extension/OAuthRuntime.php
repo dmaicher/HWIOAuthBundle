@@ -11,6 +11,7 @@
 
 namespace HWI\Bundle\OAuthBundle\Twig\Extension;
 
+use HWI\Bundle\OAuthBundle\Security\Http\ResourceOwnerMapInterface;
 use HWI\Bundle\OAuthBundle\Templating\Helper\OAuthHelper;
 use Twig\Extension\RuntimeExtensionInterface;
 
@@ -27,31 +28,19 @@ final class OAuthRuntime implements RuntimeExtensionInterface
     }
 
     /**
-     * @return array
+     * @return ResourceOwnerMapInterface[]
      */
-    public function getResourceOwners()
+    public function getResourceOwners(): array
     {
         return $this->helper->getResourceOwners();
     }
 
-    /**
-     * @param string $name
-     *
-     * @return string
-     */
-    public function getLoginUrl($name)
+    public function getLoginUrl(string $name): string
     {
         return $this->helper->getLoginUrl($name);
     }
 
-    /**
-     * @param string $name
-     * @param string $redirectUrl     Optional
-     * @param array  $extraParameters Optional
-     *
-     * @return string
-     */
-    public function getAuthorizationUrl($name, $redirectUrl = null, array $extraParameters = [])
+    public function getAuthorizationUrl(string $name, ?string $redirectUrl = null, array $extraParameters = []): string
     {
         return $this->helper->getAuthorizationUrl($name, $redirectUrl, $extraParameters);
     }

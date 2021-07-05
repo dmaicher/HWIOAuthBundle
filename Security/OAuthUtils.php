@@ -76,9 +76,9 @@ class OAuthUtils
     }
 
     /**
-     * @return array
+     * @return ResourceOwnerMapInterface[]
      */
-    public function getResourceOwners()
+    public function getResourceOwners(): array
     {
         $resourceOwners = [];
 
