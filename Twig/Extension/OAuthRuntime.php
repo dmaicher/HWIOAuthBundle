@@ -11,7 +11,6 @@
 
 namespace HWI\Bundle\OAuthBundle\Twig\Extension;
 
-use HWI\Bundle\OAuthBundle\Security\Http\ResourceOwnerMapInterface;
 use HWI\Bundle\OAuthBundle\Templating\Helper\OAuthHelper;
 use Twig\Extension\RuntimeExtensionInterface;
 
@@ -28,7 +27,7 @@ final class OAuthRuntime implements RuntimeExtensionInterface
     }
 
     /**
-     * @return ResourceOwnerMapInterface[]
+     * @return string[]
      */
     public function getResourceOwners(): array
     {

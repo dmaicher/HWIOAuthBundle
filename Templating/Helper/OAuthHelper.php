@@ -11,7 +11,6 @@
 
 namespace HWI\Bundle\OAuthBundle\Templating\Helper;
 
-use HWI\Bundle\OAuthBundle\Security\Http\ResourceOwnerMapInterface;
 use HWI\Bundle\OAuthBundle\Security\OAuthUtils;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Templating\Helper\Helper;
@@ -39,7 +38,7 @@ class OAuthHelper extends Helper
     }
 
     /**
-     * @return ResourceOwnerMapInterface[]
+     * @return string[]
      */
     public function getResourceOwners(): array
     {

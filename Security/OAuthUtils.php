@@ -76,7 +76,7 @@ class OAuthUtils
     }
 
     /**
-     * @return ResourceOwnerMapInterface[]
+     * @return string[]
      */
     public function getResourceOwners(): array
     {
